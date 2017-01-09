@@ -1,25 +1,56 @@
 body {
     background-color: #232323;
+    margin: 0;
+    font-family: "Montserrat", "Avenir";
 }
 
 h1 {
     text-decoration-color: white; 
     background-color: lightblue;
     text-align: center;
+    margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 1.1; 
+    padding: 20px 0;
+    transition: background 0.5s;
 }
 
+button {
+    border: none;
+    background: none; 
+    text-transform: uppercase;
+    font-family: "Montserrat", "Avenir";
+    height: 100%; 
+    font-weight: 600; 
+    color: lightblue;
+    font-size: inherit; 
+    letter-spacing: 1px;
+    outline: none;
+    transition: all 0.5s;
+}
+
+button:hover {
+    color: white; 
+    background: lightblue;
+}
 .menu {
     background-color: white;
     height: 30px; 
     margin: 0%;
     text-align: center;
 }
+
 .square {
     width: 30%; 
     background-color: #232323; 
     margin: 1.66%;
     padding-bottom: 30%; 
-    float: left
+    float: left; 
+    border-radius: 20%;
+    transition: background 0.5s; 
+    -webkit-transition: background 0.5s;
+    -moz-transition: background 0.5s;
 }
 
 .container {
@@ -28,5 +59,19 @@ h1 {
 }
 
 .selected {
+    color: white;
+    background: lightblue;
+}
 
+#colorcode {
+    font-size: 200%; 
+}
+
+#message {
+    display: inline-block;
+    width: 15%;
+    text-transform: uppercase;
+    font-family: "Montserrat", "Avenir";
+    font-weight: 600; 
+    font-size: inherit;
 }

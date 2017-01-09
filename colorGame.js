@@ -3,9 +3,12 @@ var aColors = [];
 var easyMode = true;
 var iPickedSquare;
 var defaultColor = "#232323";
+
 var lSquares = document.querySelectorAll(".square");
 var messageDisplay = document.querySelector("#message"); 
 var banner = document.querySelector("h1") ; 
+var easyBtn = document.querySelector("#easy");
+var hardBtn = document.querySelector("#hard");
 
 function getRandomColor() {
     var sColor = "#";
@@ -47,9 +50,13 @@ function pickRandomSquare() {
 
 function startGame() {
     if (!easyMode) {
-        NUM_SQUARE = 6; 
+        NUM_SQUARE = 6;
+        easyBtn.classList.remove("selected");
+        hardBtn.classList.add("selected");
     } else {
         NUM_SQUARE = 3;
+        hardBtn.classList.remove("selected");
+        easyBtn.classList.add("selected");
     }
     messageDisplay.textContent = "";
     banner.style.background = "lightblue";
@@ -73,17 +80,20 @@ function findCorrectSquare(e) {
     }
 }
 
-startGame(); 
-
-document.querySelector(".container").addEventListener("click", findCorrectSquare);
-document.querySelector("#newcolors").addEventListener("click", startGame); 
-document.querySelector("#easy").addEventListener("click", function(){
+easyBtn.addEventListener("click", function(){
     easyMode = true;
-    startGame(); 
+    startGame();
 });
-document.querySelector("#hard").addEventListener("click", function(){
+
+hardBtn.addEventListener("click", function(){
     easyMode = false; 
     startGame();
 });
+
+document.querySelector(".container").addEventListener("click", findCorrectSquare);
+document.querySelector("#newcolors").addEventListener("click", startGame); 
+
+startGame(); 
+
 
 
