@@ -28,6 +28,7 @@ function paintSquares() {
     for (var i = 0; i<lSquares.length; i++) {
         if(aColors[i]){
             lSquares[i].style.background = aColors[i];
+            lSquares[i].style.display = "block";
         } else {
             lSquares[i].style.display = "none";
         }
@@ -66,7 +67,7 @@ function findCorrectSquare(e) {
             banner.style.background = aColors[iPickedSquare];
             messageDisplay.textContent = "Bingo!"; 
         } else {
-            e.target.style.display = defaultColor;
+            e.target.style.background = defaultColor;
             messageDisplay.textContent = "Try Again";
         }
     }
