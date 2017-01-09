@@ -1,0 +1,32 @@
+body {
+    background-color: #232323;
+}
+
+h1 {
+    text-decoration-color: white; 
+    background-color: lightblue;
+    text-align: center;
+}
+
+.menu {
+    background-color: white;
+    height: 30px; 
+    margin: 0%;
+    text-align: center;
+}
+.square {
+    width: 30%; 
+    background-color: #232323; 
+    margin: 1.66%;
+    padding-bottom: 30%; 
+    float: left
+}
+
+.container {
+    margin: 0 auto; 
+    max-width: 500px;
+}
+
+.selected {
+
+}
